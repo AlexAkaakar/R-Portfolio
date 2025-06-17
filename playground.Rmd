@@ -70,3 +70,22 @@ shinyApp(ui = ui, server = server)
 
 ```
 
+
+
+```{r}
+college_enrollment_23_24 <- read.csv("//office.ads.gvsu.edu/dfs/Philanthropy-Data/PROJECTS/Active/KConnect - 2025-27 Dashboard Maintenance/2. Data/Non-Sensitive Data Files/College Enrollment by HS/input/college enrollment 23_24.csv")
+
+
+
+fileTBC <- read_csv("//office.ads.gvsu.edu/dfs/Philanthropy-Data/PROJECTS/Active/KConnect - 2025-27 Dashboard Maintenance/2. Data/Non-Sensitive Data Files/College Enrollment by HS/input/College enroll 22_23.csv")
+
+
+
+#statewide numbers for ruthmott, make sure it matches the dashboard.
+michigangrad <- fileTBC %>%
+  filter( BuildingCode == 0 & `ISD Code` == 0  & `IHE Type` == "All" & Subgroup == "All Students" ) 
+
+
+
+```
+
